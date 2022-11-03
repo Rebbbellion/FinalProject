@@ -20,10 +20,160 @@ $DM:'DM Sans';
 $ICFR:'Integral CF Regular';
 $ICFB:'Integral CF Bold';
 $AV:'Averta';
+//Button hover
+%btnhvr{
+	background: #3D00B7;
+	color: #FFFFFF;
+}
 
 ._container{
 	max-width: 1200px;
 	margin: 0px auto;
 }
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+/*--------------Header--------------*/
+.header {
+	width: 100%;
+	position: relative;
+		&__container {
+			display: grid;
+			grid-template-rows: min(109px);
+			grid-template-columns: repeat(5,max-content);
+			column-gap: 20px;
+			background-color: #FFFFFF;
+		}
+		&__logo {
+			margin: 39px 46px 0px 0px;
+			font-family: $ICFB;
+			font-size: 24px;
+			line-height: 29px;
+			color: #3D00B7;
+			position: relative;
+		}
+		&__logo::after{
+			content: '';
+			position: absolute;
+			width: 47px;
+			height: 0px;
+			top: 13px;
+			border: 1px solid #F4F4F4;
+			background-color: #F4F4F4;
+			transform: rotate(90deg);
+			cursor: default;
+			pointer-events: none;
+		}
+
+		&__menu {
+			padding-top: 47px;
+		}
+		&__upload {
+			width: 131px;
+			height: 50px;
+			margin-top: 31px;
+			border: 2px solid #3D00B7;
+			border-radius: 60px;
+			background-color: transparent;
+			font-family: $DM;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 100%;
+			letter-spacing: 0.04em;
+			color: #3D00B7;
+		}
+		&__upload:hover{
+			@extend %btnhvr;
+		}
+
+		&__connect {
+			width: 131px;
+			height: 50px;
+			margin-top: 31px;
+			border: 2px solid #3D00B7;
+			border-radius: 60px;
+			background-color: transparent;
+			font-family: $DM;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 100%;
+			letter-spacing: 0.04em;
+			color: #3D00B7;
+		}
+		&__connect:hover{
+			@extend %btnhvr;
+		}
+}
+.header::after{
+	content: '';
+	position: absolute;
+	border: 1px solid #EFEFEF;
+	width: 100%;
+	top: 109px;
+}
+.menu {
+		&__list {
+	display: grid;
+	grid-template-rows: max-content;
+	grid-template-columns: repeat(3,max-content);
+	column-gap: 47px;
+		}
+
+		&__item:last-child {
+			margin-right: 60px;
+		}
+
+		&__link {
+			font-family: $DM;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 21px;
+			letter-spacing: 0.04em;
+			color:#000000;
+			;
+		}
+}
+.search {
+	position: relative;
+
+		&__box {
+			margin-top: 31px;
+			width: 300px;
+			height: 50px;
+			background: #FFFFFF;
+			border: 2px solid #EFEFEF;
+			border-radius: 100px;
+			padding: 14px 0px 15px 30px;
+			font-family: $DM;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 21px;
+			letter-spacing: 0.04em
+		}
+		&__box::placeholder{
+			font-family: $DM;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 21px;
+			letter-spacing: 0.04em;
+			color: #C0C0C0;
+		}
+
+		&__button {
+			background: transparent;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 44px;
+			right: 13px;
+		}
+}
+/*---Main.Section"Explore"---*/
+
+
 
 
