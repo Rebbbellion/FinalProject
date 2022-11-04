@@ -33,12 +33,13 @@ $AV:'Averta';
 
 .wrapper {
 	min-height: 100%;
-	overflow: hidden;
 }
 /*--------------Header--------------*/
 .header {
 	width: 100%;
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
 		&__container {
 			display: grid;
 			grid-template-rows: min(109px);
@@ -172,7 +173,505 @@ $AV:'Averta';
 			right: 13px;
 		}
 }
-/*---Main.Section"Explore"---*/
+/*-----------------Main.Section"Explore"-----------------*/
+
+.main {
+	display: grid;
+}
+.explore {
+	display: grid;
+	grid-template-rows: max(619px);
+	grid-template-columns: 1fr 1fr;
+	/*-----------------Container1----------------*/
+	&__title {
+		width: 612px;
+		height: 96px;
+		font-family: $ICFB;
+		font-size: 40px;
+		line-height: 48px;
+		letter-spacing: 0.05em;
+		margin: 72px 0px 22px 0px;
+	}
+
+	&__text {
+		width: 471px;
+		height: 96px;
+		font-family: $DM;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+		color: #565656;
+		margin-bottom: 41px;
+	}
+
+	&__button {
+		width: 209px;
+		height: 65px;
+		background-color: transparent;
+		border: 2px solid #3D00B7;
+		border-radius: 60px;
+		font-family: $DM;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 100%;
+		letter-spacing: 0.04em;
+		color: #3D00B7;
+		margin-bottom: 40px;
+	}
+	&__button:hover{
+		@extend %btnhvr;
+	}
+}
+.counter {
+	display: grid;
+	grid-template-rows: max-content;
+	grid-template-columns: repeat(3,max-content);
+	column-gap: 23px;
+	&__artwork {
+		width: 116px;
+		height: 75px;
+	}
+
+	&__number {
+		font-family: $ICFB;
+		font-size: 40px;
+		line-height: 48px;
+
+		&_regular-font {
+			font-family: $ICFR;
+			font-size: 40px;
+			line-height: 48px;
+		}
+	}
+
+	&__title {
+		font-family: $DM;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 160%;
+		color: #565656;
+	}
+
+	&__auction {
+		width: 112px;
+		height: 75px;
+	}
+
+	&__artist {
+		width: 112px;
+		height: 75px;
+	}
+}
+/*--------------Container2----------------*/
+
+._first-image{
+	z-index: 100;
+}
+/*-------Picture1---------*/
+.explore {
+	&__container1{
+		position: relative;
+	}
+	&__container1::before{
+		content: url(../img/Main/Section-Explore/Dot.svg);
+		position: absolute;
+		top:327px;
+		left: -52px;
+		z-index: -1;
+	}
+	&__container2{
+		position: relative;
+	}
+	&__picture1 {
+		position: absolute;
+		top: 57px;
+		left: 98px;
+		z-index: 100;
+	}
+	&__container2::before{
+		content: url(../img/Main/Section-Explore/live\ auction.svg);
+		position: absolute;
+		z-index: 200;
+		top: 255px;
+		left: 30px;
+	}
+}
+.picture1 {
+	width:400px;
+	min-height:440px;
+	background-image:url(../img/Main/Section-Explore/picture1.svg);
+	background-repeat: no-repeat;
+	
+	&__title {
+		position: relative;
+		top: 26px;
+		left: 26px;
+		font-family: $DM;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 36px;
+		letter-spacing: -0.05em;
+		color: #FFFFFF;
+	}
+	&__title:hover{
+		text-decoration: underline;
+		color: #FFFFFF;
+	}
+
+	&__author {
+		position: relative;
+		top:34px;
+		left:26px;
+	}
+
+	&__auction {
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(25px);
+		border-radius: 12px;
+		position: relative;
+		top: 279px;
+		left: 26px;
+	}
+}
+.author {
+
+	&__name {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+		color:#FFFFFF;
+	}
+	&__name:hover{
+		text-decoration: underline;
+		color: #FFFFFF;
+	}
+}
+.auction {
+	width: 348px;
+	display: grid;
+	grid-template-rows: repeat(2,37px);
+	grid-template-columns: repeat(2,174px);
+	&__current-bid {
+		font-family: $DM;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #FFFFFF;
+		margin: 14px 0px 7px 26px;
+	}
+
+	&__price {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #FFFFFF;
+		margin: 0px 0px 0px 49px;
+		position: relative;
+	}
+	&__price::before{
+		content: url(../img/Main/Section-Explore/ethereum\ 2.svg);
+		position: absolute;
+		left: -24px;
+	}
+
+	&__end {
+		grid-row: 1/2;
+		grid-column: 2/3;
+		font-family: $DM;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #FFFFFF;
+		margin: 14px 0px 7px 47px;
+	}
+
+	&__time {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #FFFFFF;
+		margin-left:47px;
+		&_regular-font{
+			font-family: $DM;
+			font-size: 16px;
+			line-height: 21px;
+			color: #FFFFFF;
+			font-weight: 400;
+		}
+	}
+}
+/*------------Picture2----------*/
+.explore {
+	&__picture2 {
+		z-index: 50;
+		position: absolute;
+		top: 81px;
+		left: 178px;
+	}
+}
+.picture2 {
+	min-height: 391px;
+	width: 356px;
+	background-image:url(../img/Main/Section-Explore/picture2.svg);
+	background-repeat: no-repeat;
+	
+	&__title {
+		position: relative;
+		top: 26px;
+		left: 26px;
+		font-family: $DM;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 36px;
+		letter-spacing: -0.05em;
+		color: #FFFFFF;
+	}
+	&__title:hover{
+		text-decoration: underline;
+		color: #FFFFFF;
+	}
+
+	&__author {
+		position: relative;
+		top:34px;
+		left:26px;
+	}
+
+	&__auction {
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(25px);
+		border-radius: 12px;
+		position: relative;
+		top: 279px;
+		left: 26px;
+	}
+}
+.author {
+
+	&__name {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+		color:#FFFFFF;
+	}
+}
+.auction {
+	width: 348px;
+	display: grid;
+	grid-template-rows: repeat(2,37px);
+	grid-template-columns: repeat(2,174px);
+	&__current-bid {
+		font-family: $DM;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #FFFFFF;
+		margin: 14px 0px 7px 26px;
+	}
+
+	&__price {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #FFFFFF;
+		margin: 0px 0px 0px 49px;
+		position: relative;
+	}
+	&__price::before{
+		content: url(../img/Main/Section-Explore/ethereum\ 2.svg);
+		position: absolute;
+		left: -24px;
+	}
+
+	&__end {
+		grid-row: 1/2;
+		grid-column: 2/3;
+		font-family: $DM;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #FFFFFF;
+		margin: 14px 0px 7px 47px;
+	}
+
+	&__time {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #FFFFFF;
+		margin-left:47px;
+		&_regular-font{
+			font-family: $DM;
+			font-size: 16px;
+			line-height: 21px;
+			color: #FFFFFF;
+			font-weight: 400;
+		}
+	}
+}
+/*--------Picture3----------*/
+
+.explore {
+	&__picture3 {
+		position: absolute;
+		top: 106px;
+		left: 255px;
+	}
+}
+.picture3 {
+	width: 310px;
+	height: 341px;
+	background-image:url(../img/Main/Section-Explore/picture3.svg);
+	background-repeat: no-repeat;
+	
+	&__title {
+		position: relative;
+		top: 26px;
+		left: 26px;
+		font-family: $DM;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 36px;
+		letter-spacing: -0.05em;
+		color: #FFFFFF;
+	}
+
+	&__author {
+		position: relative;
+		top:34px;
+		left:26px;
+	}
+
+	&__auction {
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(25px);
+		border-radius: 12px;
+		position: relative;
+		top: 279px;
+		left: 26px;
+	}
+}
+.author {
+
+	&__name {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 26px;
+		color:#FFFFFF;
+	}
+}
+.auction {
+	width: 348px;
+	display: grid;
+	grid-template-rows: repeat(2,37px);
+	grid-template-columns: repeat(2,174px);
+	&__current-bid {
+		font-family: $DM;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #FFFFFF;
+		margin: 14px 0px 7px 26px;
+	}
+
+	&__price {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #FFFFFF;
+		margin: 0px 0px 0px 49px;
+		position: relative;
+	}
+	&__price::before{
+		content: url(../img/Main/Section-Explore/ethereum\ 2.svg);
+		position: absolute;
+		left: -24px;
+	}
+
+	&__end {
+		grid-row: 1/2;
+		grid-column: 2/3;
+		font-family: $DM;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 16px;
+		color: #FFFFFF;
+		margin: 14px 0px 7px 47px;
+	}
+
+	&__time {
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 21px;
+		color: #FFFFFF;
+		margin-left:47px;
+		&_regular-font{
+			font-family: $DM;
+			font-size: 16px;
+			line-height: 21px;
+			color: #FFFFFF;
+			font-weight: 400;
+		}
+	}
+}
+/*-----------------------------------Section.Amaze-------------------------------------*/
+
+.main {
+
+	&__amaze {
+		
+	}
+}
+.amaze {
+	display: grid;
+	grid-template-rows: max(326px);
+
+	&__title {
+		width: 398px;
+		height: 68px;
+		font-family: $ICFB;
+		font-size: 28px;
+		line-height: 34px;
+	}
+
+	&__fast {
+	}
+
+	&__grow {
+	}
+}
+.fast {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+.grow {
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+
 
 
 
