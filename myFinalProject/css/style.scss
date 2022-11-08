@@ -179,7 +179,7 @@ $AV:'Averta';
 
 .main {
 	display: grid;
-	grid-template-rows: 619px 326px 808px 619px;
+	grid-template-rows: 619px 326px 808px 619px 790px;
 }
 .explore {
 	display: grid;
@@ -1286,6 +1286,10 @@ $AV:'Averta';
 		color: #000000;
 		grid-area: ptitle;
 	}
+	&__title:hover{
+		text-decoration: underline;
+		color: #000000;
+	}
 
 	&__author-logo {
 		grid-area: logo;
@@ -1314,21 +1318,105 @@ $AV:'Averta';
 		width: 98px;
 		height: 29px;
 	}
+	&__total:hover{
+		color: #FFFFFF;
+		background-color: #2639ED;
+		cursor: default;
+	}
 }
 
+/*--------------------------------Section.Sign-up--------------------------------------*/
+.sign-up {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 78px;
 
+	&__txtblock {
+		grid-row: 1/2;
+		grid-column: 2/3;
+	}
 
+	&__pictureblck {
+		margin-top:102px;
+	}
+}
+.txtblock {
 
+	&__title {
+		font-family: $ICFB;
+		font-size: 32px;
+		line-height: 38px;
+		margin-top: 240px;
+	}
 
+	&__text {
+		font-family: $DM;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 160%;
+		color: #636363;
+		margin-top:40px;
+		margin-bottom: 32px;
+	}
 
+	&__button {
+		width: 212px;
+		height: 65px;
+		background: transparent;
+		color: #3D00B7;
+		border: 2px solid #3D00B7;
+		border-radius: 50px;
+		font-family: $AV;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 25px;
+		letter-spacing: 0.065em;
+	}
+	&__button:hover{
+		@extend %btnhvr;
+	}
+}
+.pictureblck {
+	display: grid;
+	grid-template-rows: repeat(2,max-content);
+	grid-template-columns: repeat(2,max-content);
+	row-gap: 52px;
+	column-gap: 64px;
 
+	&__item1 {
+		position: relative;
+	}
 
+	&__item2 {
+		grid-row: 1/3;
+		grid-column: 2/3;
+		align-self: center;
+		position: relative;
+	}
 
-
-
-
-
-
-
-
-
+	&__item3 {
+		justify-self: end;
+		position: relative;
+	}
+	&__item1::after{
+		content: url(../img/Main/Section-Sign-up/picture1logo.svg);
+		position: absolute;
+		bottom: -40px;
+		right: -40px;
+		z-index: 1;
+	}
+	&__item2::after{
+		content: url(../img/Main/Section-Sign-up/picture2logo.svg);
+		position: absolute;
+		bottom: -40px;
+		right: -40px;
+		z-index: 1;
+	}
+	&__item3::after{
+		content: url(../img/Main/Section-Sign-up/picture3logo.svg);
+		position: absolute;
+		bottom: -40px;
+		right: -40px;
+		z-index: 1;
+	}
+}
