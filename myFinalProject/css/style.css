@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Averta";
   src: url(../fonts/AvertaDemoPE-Regular.woff2);
 }
-.txtblock__button:hover, .infoblock__button:hover, .explore__button:hover, .header__connect:hover, .header__upload:hover {
+.discover__button:hover, .txtblock__button:hover, .infoblock__button:hover, .explore__button:hover, .header__connect:hover, .header__upload:hover {
   background: #3D00B7;
   color: #FFFFFF;
 }
@@ -174,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 .header::after {
   content: "";
   position: absolute;
+  background-color: #EFEFEF;
   border: 1px solid #EFEFEF;
   width: 100%;
   top: 109px;
@@ -253,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 /*-----------------Main.Section"Explore"-----------------*/
 .main {
   display: grid;
-  grid-template-rows: 619px 326px 808px 619px 790px;
+  grid-template-rows: 619px 326px 808px 619px 790px 2001px;
 }
 
 .explore {
@@ -1430,4 +1431,213 @@ h1, h2, h3, h4, h5, h6 {
   bottom: -40px;
   right: -40px;
   z-index: 1;
+}
+
+/*---------------------Section.Discover---------------------------*/
+.discover {
+  background: rgba(217, 224, 236, 0.2);
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.discover__container {
+  display: grid;
+  grid-template-rows: 41px 44px 1fr;
+  row-gap: 36px;
+  margin-top: 64px;
+}
+.discover__title {
+  font-family: "Integral CF Bold";
+  font-size: 34px;
+  line-height: 41px;
+}
+.discover__content {
+  margin-top: 4px;
+}
+.discover__button {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #4F33A3;
+  width: 179px;
+  height: 66px;
+  border: 2px solid #3D00B7;
+  border-radius: 50px;
+  margin: 0px auto;
+  background: transparent;
+  margin-top: 19px;
+}
+.filterblck {
+  display: grid;
+  grid-template-rows: 44px;
+  grid-template-columns: repeat(7, -webkit-max-content) 1fr;
+  grid-template-columns: repeat(7, max-content) 1fr;
+  align-items: center;
+}
+.filterblck__item {
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgba(220, 220, 220, 0.2);
+  border-radius: 100px;
+  padding: 10px 20px;
+}
+.filterblck__all-filters {
+  cursor: pointer;
+  justify-self: end;
+  margin-right: 6px;
+  width: 135px;
+  height: 44px;
+  background: rgba(220, 220, 220, 0.2);
+  border-radius: 100px;
+  color: #371C87;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  position: relative;
+  text-align: center;
+  padding: 13px 20px 13px 54px;
+}
+.filterblck__all-filters::before {
+  content: url(../img/Main/Section-Discover/filter-results-button1.svg);
+  position: absolute;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: repeat(4, 373px);
+  grid-template-columns: repeat(4, 270px);
+  grid-auto-flow: row;
+  row-gap: 40px;
+  -moz-column-gap: 39px;
+       column-gap: 39px;
+}
+
+.nftcard {
+  width: 270px;
+  height: 373px;
+  background: #FFFFFF;
+  border: 1.09706px solid rgba(242, 242, 242, 0.5);
+  border-radius: 13.1647px;
+  display: grid;
+  grid-template-rows: repeat(4, -webkit-max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-columns: repeat(2, 124px);
+  position: relative;
+}
+.nftcard__picture_content {
+  margin: 11px 11px 0px 11px;
+}
+.nftcard__logo {
+  position: absolute;
+  bottom: 112px;
+  left: 20px;
+}
+.nftcard__logo_1 {
+  margin-right: -20px;
+}
+.nftcard__logo_2 {
+  margin-right: -20px;
+}
+.nftcard__logo_3 {
+  margin-right: -20px;
+}
+.nftcard__logo_4 {
+  margin-right: -20px;
+}
+.nftcard__title {
+  font-weight: 700;
+  font-size: 19.7471px;
+  line-height: 19px;
+  color: #000000;
+  margin-left: 23px;
+  margin-top: 22px;
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+.nftcard__price {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 10.9706px;
+  line-height: 14px;
+  color: #00AC4F;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  margin-top: 11px;
+  margin-bottom: 30px;
+  position: relative;
+  margin-left: 38px;
+}
+.nftcard__price::before {
+  content: url(../img/Main/Section-Discover/ethereum\ 2.svg);
+  position: absolute;
+  left: -15px;
+  top: -2px;
+}
+.nftcard__price::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: -15px;
+  width: 223.8px;
+  border: 1.06366px solid #F4F4F4;
+  background-color: #F4F4F4;
+}
+.nftcard__amount {
+  margin-top: 8px;
+  justify-self: end;
+  margin-right: 27px;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 13.1647px;
+  line-height: 19px;
+  color: #838383;
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+.nftcard__time {
+  margin: 0px 0px 12px 23px;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 10.9706px;
+  line-height: 19px;
+  color: #5539A8;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4.38824px 10.9706px;
+  background: #F5F5F5;
+  border-radius: 109.706px;
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+.nftcard__button {
+  margin-top: 2px;
+  margin-right: 22px;
+  justify-self: end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: transparent;
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 15.3588px;
+  line-height: 20px;
+  color: #4F33A3;
+  grid-row: 4/5;
+  grid-column: 2/3;
 }
