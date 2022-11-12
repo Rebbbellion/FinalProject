@@ -1641,3 +1641,147 @@ h1, h2, h3, h4, h5, h6 {
   grid-row: 4/5;
   grid-column: 2/3;
 }
+
+/*-------------------------Footer------------------------------*/
+.footer {
+  display: grid;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  grid-template-columns: repeat(4, -webkit-max-content);
+  grid-template-columns: repeat(4, max-content);
+  -moz-column-gap: 92px;
+       column-gap: 92px;
+  row-gap: 84px;
+  position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.footer__nft {
+  margin-top: 40px;
+  margin-right: 8px;
+}
+.footer__title {
+  font-family: "Integral CF Bold";
+  font-size: 24px;
+  line-height: 29px;
+}
+.footer__text {
+  margin-top: 27px;
+  margin-bottom: 32px;
+  width: 333px;
+  height: 66px;
+  font-family: "Averta";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #565656;
+}
+.footer__copyright {
+  font-family: "Averta";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #A4A4A4;
+  grid-row: 2/3;
+  grid-column: 1/5;
+  justify-self: center;
+  margin-bottom: 24px;
+}
+
+.footer::after {
+  content: "";
+  width: 100%;
+  border: 1px solid #F4F4F4;
+  background-color: #F4F4F4;
+  position: absolute;
+  bottom: 22px;
+}
+
+.logo__twitter {
+  margin-left: 15px;
+  margin-right: 16px;
+}
+
+.list__title {
+  margin-top: 44px;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+.list__item_link {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 200%;
+  color: #3D3D3D;
+}
+
+.mail__title {
+  margin-top: 44px;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+.mail__text {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 362px;
+  height: 66px;
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  color: #363639;
+}
+.mail__form {
+  position: relative;
+}
+.mail__input {
+  width: 364px;
+  height: 60.79px;
+  background: #FFFFFF;
+  border: 2px solid #F1F1F1;
+  border-radius: 45.595px;
+  padding: 23px 0px 22px 25px;
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12.1587px;
+  line-height: 16px;
+}
+.mail__input::-moz-placeholder {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12.1587px;
+  line-height: 16px;
+  color: #959595;
+}
+.mail__input:-ms-input-placeholder {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12.1587px;
+  line-height: 16px;
+  color: #959595;
+}
+.mail__input::placeholder {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12.1587px;
+  line-height: 16px;
+  color: #959595;
+}
+.mail__button {
+  width: 149.79px;
+  height: 46.4px;
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12.1587px;
+  line-height: 16px;
+  letter-spacing: 0.065em;
+  color: #FFFFFF;
+  background: #2639ED;
+  border-radius: 45.595px;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}

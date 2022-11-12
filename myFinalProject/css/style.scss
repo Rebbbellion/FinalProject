@@ -1619,3 +1619,143 @@ $AV:'Averta';
 		grid-column: 2/3;
 	}
 }
+/*-------------------------Footer------------------------------*/
+
+.footer {
+	display: grid;
+	grid-template-rows: 1fr max-content;
+	grid-template-columns: repeat(4,max-content);
+	column-gap: 92px;
+	row-gap: 84px;
+	position: relative;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+	&__nft {
+		margin-top: 40px;
+		margin-right: 8px;
+	}
+
+	&__title {
+		font-family: $ICFB;
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	&__text {
+		margin-top: 27px;
+		margin-bottom: 32px;
+		width: 333px;
+		height: 66px;
+		font-family: $AV;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: #565656;
+	}
+	&__copyright {
+		font-family: $AV;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: #A4A4A4;
+		grid-row:2/3;
+		grid-column: 1/5;
+		justify-self: center;
+		margin-bottom: 24px;
+	}
+}
+.footer::after{
+	content: '';
+	width: 100%;
+	border: 1px solid #F4F4F4;
+	background-color: #F4F4F4;
+	position: absolute;
+	bottom: 22px;
+}
+.logo {
+	&__twitter {
+		margin-left: 15px;
+		margin-right: 16px;
+	}
+}
+.list {
+
+	&__title {
+		margin-top: 44px;
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 23px;
+	}
+
+	&__item {
+
+		&_link {
+			font-family: $DM;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 200%;
+			color: #3D3D3D;
+		}
+	}
+}
+.mail {
+
+	&__title {
+		margin-top: 44px;
+		font-family: $DM;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 23px;
+	}
+
+	&__text {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		width: 362px;
+		height: 66px;
+		font-family: $DM;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 160%;
+		color: #363639;
+	}
+	&__form{
+		position: relative;
+	}
+	&__input {
+		width: 364px;
+		height: 60.79px;
+		background: #FFFFFF;
+		border: 2px solid #F1F1F1;
+		border-radius: 45.595px;
+		padding: 23px 0px 22px 25px;
+		font-family: $DM;
+		font-weight: 400;
+		font-size: 12.1587px;
+		line-height: 16px;
+	}
+	&__input::placeholder{
+		font-family: $DM;
+		font-weight: 400;
+		font-size: 12.1587px;
+		line-height: 16px;
+		color: #959595;
+	}
+
+	&__button {
+		width: 149.79px;
+		height: 46.4px;
+		font-family: $DM;
+		font-weight: 400;
+		font-size: 12.1587px;
+		line-height: 16px;
+		letter-spacing: 0.065em;
+		color: #FFFFFF;
+		background: #2639ED;
+		border-radius: 45.595px;
+		position: absolute;
+		top: 7px;
+		right: 7px;
+	}
+}
