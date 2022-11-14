@@ -1795,3 +1795,8 @@ body {
   top: 7px;
   right: 7px;
 }
+
+._activefltr {
+  background: #3D00B7;
+  color: #FFFFFF;
+}
